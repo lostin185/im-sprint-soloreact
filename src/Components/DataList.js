@@ -3,8 +3,13 @@ import DataListEntry from './DataListEntry'
 
 const DataList = () => {
   return (
-    <div>
-      this is DataList.
+    <div className="frame">
+      <div>
+        this is DataList.
+      </div>
+      <div>
+        create new data:<input />
+      </div>
       <DataListEntry />
     </div>
   )

@@ -2,8 +2,10 @@ import React from 'react';
 
 const TodoListEntry = () => {
   return (
-    <div>
-      This is TodoListEntry.
+    <div className="frame">
+      <div>
+        This is TodoListEntry.
+      </div>
     </div>
   )
 }

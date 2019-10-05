@@ -3,8 +3,13 @@ import TodoListEntry from './TodoListEntry'
 
 const TodoList = () => {
   return (
-    <div>
-      this is TodoList.
+    <div className="frame">
+      <div>
+        this is TodoList.
+      </div>
+      <div>
+        create new data:<input />
+      </div>
       <TodoListEntry />
     </div>
   )

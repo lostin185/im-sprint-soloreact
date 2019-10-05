@@ -2,8 +2,10 @@ import React from 'react'
 
 const DataEntryList = () => {
   return (
-    <div>
-      This is DataEntryList.
+    <div className="frame">
+      <div>
+        This is DataListEntry.
+      </div>
     </div>
   )
 }
