@@ -5,7 +5,7 @@ const TodoList = () => {
   return (
     <div className="frame">
       <div>
-        this is TodoList.
+        This is todo list.
       </div>
       <div>
         create new data:<input />

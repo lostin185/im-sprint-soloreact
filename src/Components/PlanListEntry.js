@@ -1,13 +1,13 @@
 import React from 'react'
 
-const DataEntryList = () => {
+const PlanListEntry = () => {
   return (
     <div className="frame">
       <div>
-        This is DataListEntry.
+        This is plan list entry.
       </div>
     </div>
   )
 }
 
-export default DataEntryList;
+export default PlanListEntry;

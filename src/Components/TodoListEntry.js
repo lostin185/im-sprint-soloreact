@@ -4,7 +4,7 @@ const TodoListEntry = () => {
   return (
     <div className="frame">
       <div>
-        This is TodoListEntry.
+        This is todo list entry.
       </div>
     </div>
   )
