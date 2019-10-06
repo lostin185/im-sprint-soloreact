@@ -14,6 +14,7 @@ const PlanList = (props) => {
         <PlanListEntry 
           plans={item}
           key={item.scheduleKey}
+          interaction={props.interaction}
         />
       )}
     </div>
