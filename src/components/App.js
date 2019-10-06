@@ -6,7 +6,7 @@ import { fakeData } from './fakeData'
 class App extends React.Component {
   constructor() {
     super();
-    this.planClicked.bind(this);
+    this.planClicked = this.planClicked.bind(this);
     this.state = {
       schedule: [],
       currentPlan: null,
@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   planClicked(e) {
-    console.dir(e.target.innerText)
+    this.setState({ currentPlan: e.target.innerText })
   }
 
   render() {
@@ -26,7 +26,7 @@ class App extends React.Component {
       <div>
         <h1>{'< Reminder >'}</h1>
         <PlanList data={this.state} interaction={this.planClicked}/>
-        <TodoList data={this.state}/>
+        <TodoList data={this.state} selected={this.state.currentPlan}/>
       </div>
     )
   }
