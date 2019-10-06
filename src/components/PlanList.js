@@ -1,26 +1,18 @@
 import React from 'react';
 import PlanListEntry from './PlanListEntry'
 
-const PlanList = ({schedule}) => {
-
+const PlanList = (props) => {
   return (
     <div className="frame">
       <div>
-        This is plan list.
+        create new plan:<input />
       </div>
-      <div>
-        'create new plan:'<input />
-      </div>
-        {schedule.map((schedule) =>
-          <PlanListEntry
-            schedule={schedule}
-          />
-        )}
-
-        {/* <PlanListEntry />
-        <PlanListEntry />
-        <PlanListEntry />
-        <PlanListEntry /> */}
+      {props.data.schedule.map((item) => 
+        <PlanListEntry 
+          plans={item}
+          key={item.scheduleKey}
+        />
+      )}
     </div>
   )
 }

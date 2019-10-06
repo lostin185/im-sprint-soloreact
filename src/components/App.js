@@ -4,10 +4,11 @@ import TodoList from './TodoList'
 import { fakeData } from './fakeData'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       schedule: [],
+      currentPlan: null,
     };
   }
 
@@ -19,12 +20,11 @@ class App extends React.Component {
     return (
       <div>
         <h1>{'< Reminder >'}</h1>
-        <PlanList schedule={this.state.schedule}/>
-        <TodoList />
+        <PlanList data={this.state}/>
+        <TodoList data={this.state}/>
       </div>
     )
   }
 }
-
 
 export default App;

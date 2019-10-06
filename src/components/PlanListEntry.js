@@ -1,14 +1,9 @@
 import React from 'react'
 
-const PlanListEntry = ({schedule}) => {
+const PlanListEntry = (props) => {
   return (
     <div className="frame">
-      <div>
-        scheduleName: {schedule.scheduleName}<br/>
-        Date: {schedule.scheduledDate}<br/>
-        Time: {schedule.scheduledTime}<br/>
-        Created: {schedule.createdDate}
-      </div>
+      {props.plans.scheduleName}
     </div>
   )
 }
