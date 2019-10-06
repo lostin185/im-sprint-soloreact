@@ -4,9 +4,7 @@ import TodoListEntry from './TodoListEntry'
 const TodoList = (props) => {
   return (
     <div className="frame">
-      <div>
-        create new data:<input />
-      </div>
+      This is todo list.
       {props.data.schedule.map(
         (item) => (<TodoListEntry todos={item} key={item.scheduleKey}/>)
       )} 

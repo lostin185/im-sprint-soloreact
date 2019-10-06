@@ -5,6 +5,9 @@ const PlanList = (props) => {
   return (
     <div className="frame">
       <div>
+        This is plan list.
+      </div>
+      <div>
         create new plan:<input />
       </div>
       {props.data.schedule.map((item) => 
