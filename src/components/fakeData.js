@@ -1,4 +1,4 @@
-fakeData = {
+export const fakeData = {
 
   schedule: [
 
