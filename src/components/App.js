@@ -17,8 +17,8 @@ class App extends React.Component {
     this.setState(fakeData)
   }
 
-  planClicked() {
-    console.log('hello!')
+  planClicked(e) {
+    console.dir(e.target.innerText)
   }
 
   render() {
