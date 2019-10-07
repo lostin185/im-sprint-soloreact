@@ -1,15 +1,27 @@
 import React from 'react';
-import TodoListEntry from './TodoListEntry'
 
 const TodoList = (props) => {
-  return (
-    <div className="frame">
-      This is todo list.
-      {props.data.schedule.map(
-        (item) => (<TodoListEntry todos={item} key={item.scheduleKey}/>)
-      )} 
-    </div>
-  )
+
+  if (!props.selected) {
+    return <div className="frame">Plan not selected</div>
+  } 
+
+  for (let i = 0; i < props.data.schedule.length; i++) {
+    if (props.data.schedule[i].scheduleName === props.selected) {
+      return (
+        <div className="frame">
+          <div>
+            {props.selected}
+          </div>
+          { // JSX start
+            props.data.schedule[i].todo.map(
+            (item) => <li key={item.todoKey}>{item.name}</li>
+            )
+          }
+        </div>
+      )
+    }
+  }
 }
 
 export default TodoList;
