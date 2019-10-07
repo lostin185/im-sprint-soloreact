@@ -26,7 +26,7 @@ class App extends React.Component {
       <div>
         <h1>{'< Reminder >'}</h1>
         <PlanList data={this.state} interaction={this.planClicked}/>
-        <TodoList data={this.state} selected={this.state.currentPlan}/>
+        <TodoList data={this.state} interaction={this.todoDone} selected={this.state.currentPlan}/>
       </div>
     )
   }

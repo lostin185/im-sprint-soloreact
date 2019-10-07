@@ -19,8 +19,10 @@ const TodoList = (props) => {
           { // JSX start
             props.data.schedule[i].todo.map(
               (item) => <li 
-                key={item.todoKey} 
-              >{item.name}</li>
+                key={item.todoKey}
+                style={{textDecoration: item.done ? "line-through" : "none"}} // good. How to do it withoug arrow function?
+              >{item.name}
+              </li>
             )
           }
         </div>
