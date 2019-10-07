@@ -13,9 +13,14 @@ const TodoList = (props) => {
           <div>
             {'< '}{props.selected}{' >'}
           </div>
-          <div>
-            add new todo: <input /><button>add</button>
-          </div>
+          <form onSubmit={props.todoSubmit}>
+            <label>
+              add new todo:
+              <input type="text" value={props.todoValue} onChange={props.todoChange} />
+            </label>
+            <input type="submit" value="Add" />
+          </form>
+
           { // JSX start
             props.data.schedule[i].todo.map(
               (item) => <li 

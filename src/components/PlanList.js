@@ -7,9 +7,13 @@ const PlanList = (props) => {
       <div>
         This is plan list.
       </div>
-      <div>
-        create new plan:<input /><button>add</button>
-      </div>
+      <form onSubmit={props.planSubmit}>
+        <label>
+          add new plan:
+          <input type="text" value={props.planValue} onChange={props.planChange} />
+        </label>
+        <input type="submit" value="Add" />
+      </form>
       {props.data.schedule.map((item) => 
         <PlanListEntry 
           plans={item}
