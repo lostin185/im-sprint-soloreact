@@ -8,7 +8,7 @@ const PlanList = (props) => {
         This is plan list.
       </div>
       <div>
-        create new plan:<input />
+        create new plan:<input /><button>add</button>
       </div>
       {props.data.schedule.map((item) => 
         <PlanListEntry 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const PlanListEntry = (props) => {
   return (
-    <div className="frame" onClick={props.interaction}>
+    <div className="eventFrame" onClick={props.interaction}>
       {props.plans.scheduleName}
     </div>
   )

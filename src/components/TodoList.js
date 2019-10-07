@@ -13,6 +13,9 @@ const TodoList = (props) => {
           <div>
             {props.selected}
           </div>
+          <div>
+            add new todo: <input /><button>add</button>
+          </div>
           { // JSX start
             props.data.schedule[i].todo.map(
             (item) => <li key={item.todoKey}>{item.name}</li>
