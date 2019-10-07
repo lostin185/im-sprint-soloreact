@@ -18,7 +18,9 @@ const TodoList = (props) => {
           </div>
           { // JSX start
             props.data.schedule[i].todo.map(
-              (item) => <li key={item.todoKey} style={{cursor:"pointer"}} onClick={props.interaction}>{item.name}</li>
+              (item) => <li 
+                key={item.todoKey} 
+              >{item.name}</li>
             )
           }
         </div>
