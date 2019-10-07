@@ -10,6 +10,7 @@ class App extends React.Component {
     this.todoInputChange = this.todoInputChange.bind(this);
     this.planInputSubmit = this.planInputSubmit.bind(this);
     this.todoInputSubmit = this.todoInputSubmit.bind(this);
+    this.makeItDone = this.makeItDone.bind(this);
     this.state = {
       schedule: [],
       currentPlan: null,
@@ -42,24 +43,41 @@ class App extends React.Component {
 
   todoInputSubmit(e) {
     let newSchedules = [];
-    
     for (let i = 0; i < this.state.schedule.length; i++) {
       newSchedules.push(this.state.schedule[i]);
     }
-    
     let newObj = {};
     newObj.todoKey = new Date();
     newObj.name = this.state.todoInput;
     newObj.done = false;
-
     for (let i = 0; i < this.state.schedule.length; i++) {
       if (newSchedules[i].scheduleName === this.state.currentPlan) {
         newSchedules[i].todo.push(newObj);
       }
     }
-
     this.setState({schedule: newSchedules})
     e.preventDefault();
+  }
+
+  makeItDone(e) {
+    // console.log(e.target)
+    //when click todo -> todo[i].done = true, line through
+    let newSchedules = [];
+    for (let i = 0; i < this.state.schedule.length; i++) {
+      newSchedules.push(this.state.schedule[i]);
+    }
+
+    for (let i = 0; i < this.state.schedule.length; i++) {
+      if (newSchedules[i].scheduleName === this.state.currentPlan) {
+        for (let j = 0; j < newSchedules[i].todo.length; j++) {
+          if (newSchedules[i].todo[j].name === e.target.innerText) {
+            newSchedules[i].todo[j].done = !(newSchedules[i].todo[j].done)
+          }
+        }   
+      }
+    }
+
+    this.setState({schedule: newSchedules})
   }
 
   render() {
@@ -77,7 +95,8 @@ class App extends React.Component {
           selected={this.state.currentPlan}
           todoChange={this.todoInputChange}
           todoSubmit={this.todoInputSubmit}
-          todoValue={this.todoInput}/>
+          todoValue={this.todoInput}
+          makeItDone={this.makeItDone}/>
       </div>
     )
   }

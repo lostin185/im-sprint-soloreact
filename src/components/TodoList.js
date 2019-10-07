@@ -26,6 +26,8 @@ const TodoList = (props) => {
               (item) => <li 
                 key={item.todoKey}
                 style={{textDecoration: item.done ? "line-through" : "none"}} // good. How to do it withoug arrow function?
+                className="usePointer"
+                onClick={props.makeItDone}
               >{item.name}
               </li>
             )

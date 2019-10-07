@@ -24,3 +24,7 @@
 .yet {
   text-decoration: none;
 }
+
+.usePointer {
+  cursor: pointer;
+}
