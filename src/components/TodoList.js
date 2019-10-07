@@ -11,14 +11,14 @@ const TodoList = (props) => {
       return (
         <div className="frame">
           <div>
-            {props.selected}
+            {'< '}{props.selected}{' >'}
           </div>
           <div>
             add new todo: <input /><button>add</button>
           </div>
           { // JSX start
             props.data.schedule[i].todo.map(
-            (item) => <li key={item.todoKey}>{item.name}</li>
+              (item) => <li key={item.todoKey} style={{cursor:"pointer"}} onClick={props.interaction}>{item.name}</li>
             )
           }
         </div>

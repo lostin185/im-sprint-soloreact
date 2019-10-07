@@ -16,3 +16,11 @@
 .buttonLoc {
   float: right;
 }
+
+.done {
+  text-decoration: line-through;
+}
+
+.yet {
+  text-decoration: none;
+}
